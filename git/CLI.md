@@ -382,7 +382,7 @@ $ git push -u origin master
 $ git remote add origin <URL>
 ```
 
- 하나의 origin을 여러 URL에 remote 할 수 있다.
+ 하나의 'origin'을 여러 URL에 remote 할 수 있다.
 
 - 하진 하나를 여러 드라이브에 저장 할 수 있다.
 - 원격 저장소 이름이 origin
