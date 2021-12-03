@@ -86,7 +86,7 @@ C:\Users\owner
   *window에서는 폴더를 더블클릭해서 들어가는 개념으로 생각*
 
 - ```shell
-  cd CLI
+  $ cd CLI
   ```
 
 - 명령어 입력 화면
@@ -96,14 +96,14 @@ C:\Users\owner
 - 폴더 한단계 위로 올라가기
   윈도우에서는 **↑** 기호로 보면 됨
 
-  - ```
-    cd ..
+  - ```shell
+    $ cd ..
     ```
 
 - 바로 홈폴더(~)로 가기
 
-  - ```
-    cd
+  - ```shell
+    $ cd
     ```
 
 - 
@@ -115,7 +115,7 @@ C:\Users\owner
 - `ls` 명령어를 이용하여 현재 작업창(폴더)내에 있는 파일 보기
 
 - ```shell
-  ls
+  $ ls
   ```
 
 - 명령어 입력 화면
@@ -131,7 +131,7 @@ C:\Users\owner
 - `rm` 명령어를 이용하여 파일 삭제 (단, 휴지통으로 이동이 아닌 완전 삭제)
 
 - ```shell
-  rm filename.txt
+  $ rm filename.txt
   ```
 
 - 명령어 입력 화면
@@ -143,25 +143,33 @@ C:\Users\owner
   - *을 사용하여 해당 폴더 안에 있는 모든 파일 삭제
 
 - ```shell
-  rm *.txt
+  $ rm *.txt
   ```
 
 ### 숨긴파일 만들기
 
 - 윈도우에서는 보이지만, 유닉스에서 숨긴파일 만들기
+
+- ```
+  $ touch .hidden.txt
+  ```
+
+  - 파일명에 .을 붙여서 만들면 `ls`했을때 안보임
+    단, 윈도우에서는 보임
+
+- 안보이는 파일을 보려면
+
+- ```shell
+  $ ls -a
+  ```
+
+- 안보이는 파일 지울때
+
+- ```shell
+  $ rm .hidden.txt
+  ```
+
 - 
-
-\#touch .hidden.txt / 파일명에 .을 붙여서 만들면 ls했을때 안보임. / 윈도우에서는 보임
-
-touch .hidden.txt
-
-
-
-\#안보이는 파일을 보려면
-
-\#ls -a / -a를 하면 다 보여줌
-
-ls -a
 
 
 
@@ -349,3 +357,40 @@ git log 했을때 내용이 너무 길어서  : 나오면 q를 누르면 된다
 commit할때 메세지 없으면 이상한 창이 나옴
 
 그때는 esc 계속 누르다가 :q!로 나오기
+
+
+
+git init
+
+git add .
+
+git commit -m 'first commit'
+
+$ git remote add origin "git주소"
+
+=> 컴퓨터에 있는 로컬저장소와 github에 있는 원격저장소를 연결시킴
+
+$ git push -u origin master
+
+
+
+# 21.12.03
+
+## 원격 저장소(remote repo) 등록하기
+
+```shell
+$ git remote add origin <URL>
+```
+
+ 하나의 origin을 여러 URL에 remote 할 수 있다.
+
+- 하진 하나를 여러 드라이브에 저장 할 수 있다.
+- 원격 저장소 이름이 origin
+
+## 원격 저장소에 PUSH하기
+
+```
+$ git push origin master
+```
+
+ 
